@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import ScrollToTop from './components/ScorllToTop'
 import { connect } from 'react-redux'
 import Main from './layout/main/Index'
 import Login from './layout/Login'
@@ -8,6 +9,7 @@ import NoAuthorized from './views/others/403/403_page'
 const App = ({loginState}) => {
     return (
      <Router>
+       <ScrollToTop>
        <Switch>
        {/* 这里判断权限 */}
        <Route path="/403" component={NoAuthorized} />
@@ -24,6 +26,7 @@ const App = ({loginState}) => {
            <Redirect to="/login" />
          }
        </Switch>
+       </ScrollToTop>
      </Router>
     )
   }

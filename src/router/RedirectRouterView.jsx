@@ -9,10 +9,7 @@ const RedirectRouterView = () => {
     return (
         <Switch>
             {
-                redirectMenus.map((item => {
-                    const Item = <Redirect key={item.path} path = {item.path}  exact to={item.redirect} />
-                    return Item
-                }))
+                redirectMenus.map((item => <Redirect key={item.path} path = {item.path}  exact to={item.redirect} /> ))
             }
         </Switch>
     )
