@@ -40,7 +40,7 @@
 
 #### 安装依赖
 
-yarn install 
+yarn 
 
 #### 运行
 
